@@ -198,4 +198,5 @@ modutil -dbdir sql:$HOME/.pki/nssdb -delete "OpenSC"
 **Document Version:** 1.0  
 **Last Updated:** November 2025  
 **Tested On:** Arch Linux
-**Any troubles, please feel free to raise an issue** . 
+---
+**Any troubles, please feel free to raise an issue** 
