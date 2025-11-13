@@ -2,7 +2,8 @@
 ## Manual Installation and Configuration
 
 - This guide walks through setting up an Identiv Smartfold SCR3500-C CAC reader on Linux systems, specifically Arch Linux and Ubuntu/Debian derivatives. Explicitly, this is intended for my workplace's specific Remote Electronic Access virtual machine/desktop system - although it could be applicable for other use cases. YMMV.  
-- PLEASE NOTE: This has only been tested thusfar on Arch, and seems to only work for chromium-based browsers rather than firefox. I may work to test on more distros, and attempt to fix the browser requirement if the mood hits in future. 
+- PLEASE NOTE: This has only been tested thusfar on Arch, and seems to only work for chromium-based browsers rather than firefox. I may work to test on more distros, and attempt to fix the browser requirement if the mood hits in future.
+- Recommend following the steps precisely as listed in this README.
 
 ---
 
