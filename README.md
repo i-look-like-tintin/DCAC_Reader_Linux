@@ -5,6 +5,8 @@
 - PLEASE NOTE: This has only been tested thusfar on Arch, and seems to only work for chromium-based browsers rather than firefox. I may work to test on more distros, and attempt to fix the browser requirement if the mood hits in future.
 - Recommend following the steps precisely as listed in this README.
 
+- As a side note, I am also figuring a couple of components of the setup aren't actually required, may look to remove them and re-test in future. 
+
 ---
 
 ## Prerequisites
