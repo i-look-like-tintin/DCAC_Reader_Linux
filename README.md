@@ -95,7 +95,7 @@ To use your CAC with web browsers, you need to configure the PKCS#11 security mo
 
 ### Chrome/Chromium
 
-Chrome uses the NSS database for certificate management. Configure it via command line:
+Chrome uses the NSS database for certificate management. This should have been configured automatically via the setup script. However, if there are any issues surrounding certificate pin prompts, can be configured via command line:
 ```bash
 modutil -dbdir sql:$HOME/.pki/nssdb -add "OpenSC" -libfile /usr/lib/opensc-pkcs11.so
 ```
