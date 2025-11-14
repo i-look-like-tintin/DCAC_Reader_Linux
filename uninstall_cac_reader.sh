@@ -156,8 +156,8 @@ cleanup_instructions() {
     echo "  2. Find 'ICA' → Change to 'Always ask'"
     echo ""
     
-    print_info "Chrome/Chromium - Remove PKCS#11 Module:"
-    echo "  Run: modutil -dbdir sql:\$HOME/.pki/nssdb -delete \"OpenSC\""
+    print_info "Chrome/Chromium - Automatically removed"
+    modutil -dbdir sql:\$HOME/.pki/nssdb -delete \"OpenSC\"
     echo ""
 }
 
