@@ -189,6 +189,7 @@ chmod +x uninstall_cac_reader.sh
 **Firefox:** Go to Security Devices and unload the OpenSC module. Again, at this date I have not been able to get Firefox to work all the way through so Chromium is by far the best option for installation. 
 
 **Chrome:**
+Uninstallation script should remove this NSS entry, however can be run manually using this command if needed.
 ```bash
 modutil -dbdir sql:$HOME/.pki/nssdb -delete "OpenSC"
 ```
