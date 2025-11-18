@@ -221,8 +221,8 @@ configuration_instructions() {
     echo "     Module Path: /usr/lib/opensc-pkcs11.so"
     echo ""
     
-    print_info "Chrome/Chromium - Configured automatically"
-    modutil -dbdir sql:\$HOME/.pki/nssdb -add \"OpenSC\" -libfile /usr/lib/opensc-pkcs11.so
+    print_info "Chrome/Chromium - Run this command:"
+    echo "  modutil -dbdir sql:\$HOME/.pki/nssdb -add \"OpenSC\" -libfile /usr/lib/opensc-pkcs11.so"
     echo ""
     
     if [ "$CITRIX_MANUAL" != true ]; then

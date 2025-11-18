@@ -17,7 +17,7 @@
 
 ---
 
-## 1. Verifying Hardware Detection
+## Verifying Hardware Detection
 
 Before installing software, verify your CAC reader is detected by the system:
 ```bash
@@ -33,7 +33,7 @@ The specific bus and device numbers will vary, but the vendor ID (04e6) and prod
 
 ---
 
-## 2. Installing Required Packages
+## Installing Required Packages
 
 ### Run the setup script
 ```bash
@@ -54,7 +54,7 @@ sudo systemctl enable pcscd.socket
 
 ---
 
-## 3. Verifying Reader Detection
+## Verifying Reader Detection
 
 After installing packages and starting the daemon, verify your reader is properly detected.
 
@@ -72,7 +72,7 @@ Press `Ctrl+C` to exit when done.
 
 **If you get "command not found":** Install pcsc-tools
 
-## 4. Browser Configuration
+## Browser Configuration
 
 To use your CAC with web browsers, you need to configure the PKCS#11 security module. PLEASE NOTE: Firefox has not fully worked for me thusfar; I have only had complete success with Chromium. 
 
@@ -95,7 +95,7 @@ To use your CAC with web browsers, you need to configure the PKCS#11 security mo
 
 ### Chrome/Chromium
 
-Chrome uses the NSS database for certificate management. This should have been configured automatically via the setup script. However, if there are any issues surrounding certificate pin prompts, can be configured via command line:
+Chrome uses the NSS database for certificate management. Configure it via command line:
 ```bash
 modutil -dbdir sql:$HOME/.pki/nssdb -add "OpenSC" -libfile /usr/lib/opensc-pkcs11.so
 ```
@@ -114,7 +114,7 @@ modutil -dbdir sql:$HOME/.pki/nssdb -delete "OpenSC"
 
 ---
 
-## 5. Service Management Options
+## Service Management Options
 
 By default, `pcscd` runs continuously. For personal machines with occasional CAC use, you may prefer on-demand activation. If so, use this option below (it is also the same setup that I verified functionality with).
 
@@ -189,15 +189,13 @@ chmod +x uninstall_cac_reader.sh
 **Firefox:** Go to Security Devices and unload the OpenSC module. Again, at this date I have not been able to get Firefox to work all the way through so Chromium is by far the best option for installation. 
 
 **Chrome:**
-Uninstallation script should remove this NSS entry, however can be run manually using this command if needed.
 ```bash
 modutil -dbdir sql:$HOME/.pki/nssdb -delete "OpenSC"
 ```
 
 ---
 
-**Document Version:** 1.1  
+**Document Version:** 1.0  
 **Last Updated:** November 2025  
 **Tested On:** Arch Linux
----
-**Any troubles, please feel free to raise an issue** 
+**Any troubles, please feel free to raise an issue**
